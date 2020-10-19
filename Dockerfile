@@ -1,6 +1,6 @@
 FROM ruby:2.6-slim
 
-LABEL maintainer="Josh Bielick <jbielick@adwerx.com>"
+LABEL maintainer="developers@gresb.com"
 
 ENV BUNDLER_VERSION="2.1.4"
 ENV ESLINT_VERSION="6.8.0"

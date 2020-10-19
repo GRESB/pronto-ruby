@@ -1,4 +1,4 @@
-name=adwerx/pronto-ruby
+name=gresb/pronto-ruby
 
 image:
 	docker build -f Dockerfile . -t ${name}:${TAG}
