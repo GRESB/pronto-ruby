@@ -1,7 +1,7 @@
 name=gresb/pronto-ruby
 
 image:
-	docker build -f Dockerfile . -t ${name}:${TAG}
+	docker build -f Dockerfile . -t ${name}:v1
 
 test: spec/fixtures/test.git
 	docker run -v "${CURDIR}:/runner" --entrypoint ./dev_entrypoint.sh --rm ${name} rspec
@@ -13,7 +13,7 @@ spec/fixtures/test.git:
 # 	docker tag ${name} ${name}:${TAG}
 
 push: image
-	docker push ${name}:${TAG}
+	docker push ${name}:v1
 
 console: spec/fixtures/test.git
 	docker run -it -v "${CURDIR}:/runner" --entrypoint ./dev_entrypoint.sh --rm ${name} bash
